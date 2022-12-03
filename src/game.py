@@ -37,7 +37,10 @@ class Game:
 
         self.clock = pygame.time.Clock()
 
-        self.screen = pygame.display.set_mode((800, 600), HWSURFACE|DOUBLEBUF|RESIZABLE)
+        self.screen = pygame.display.set_mode(
+            (800, 600),
+            pygame.HWSURFACE | pygame.DOUBLEBUF | pygame.SCALED | pygame.RESIZABLE,
+        )
 
         icon, rect = load_image("icon64x64.png", (0, 0, 0))
         pygame.display.set_icon(icon)
